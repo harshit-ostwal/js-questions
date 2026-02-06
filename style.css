@@ -15,15 +15,12 @@ html,
 body {
   height: 100%;
   width: 100%;
-  background: #000;
 }
 
 main {
   display: flex;
   flex-direction: column;
-  background: black;
   position: relative;
-  color: white;
   height: 100%;
   gap: 40px;
   padding: 40px;
@@ -31,7 +28,7 @@ main {
 
 h1 {
   font-weight: bold;
-  color: blanchedalmond;
+  color: black;
 }
 
 h4 {
@@ -84,7 +81,7 @@ h4 {
     gap: 20px;
 
     & .question-item {
-      border: 1px solid rgb(70, 70, 70);
+      border: 1px solid rgb(216, 216, 216);
       border-radius: 20px;
       padding: 20px;
       display: flex;
@@ -99,7 +96,7 @@ h4 {
 
     & .question-item:hover,
     .question-item:active {
-      border: 1px solid white;
+      border: 1px solid black;
       transition-duration: 500ms;
     }
 
@@ -116,7 +113,8 @@ h4 {
   z-index: 100;
   bottom: 0;
   width: 100%;
-  background: white;
+  background: black;
+  color: white;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -130,7 +128,6 @@ h4 {
     gap: 10px;
 
     & .title {
-      color: #000;
       font-weight: bold;
     }
 
@@ -174,7 +171,6 @@ h4 {
 
     & .console-output {
       font-size: 20px;
-      color: black;
       display: block;
     }
   }
