@@ -2,9 +2,16 @@ const consoleContainer = document.querySelector(".console-container");
 const clearButton = document.querySelector(".btn-destructive");
 const questionButtons = document.querySelectorAll(".question-item .btn");
 
-async function print(message) {
+function print(message, type = "log") {
   const output = document.createElement("span");
   output.className = "console-output";
+
+  if (type == "error") {
+    output.style.color = "red";
+    console.error(message);
+  } else {
+    console.log(message);
+  }
 
   output.textContent = message;
   consoleContainer.appendChild(document.createElement("br"));
@@ -20,7 +27,154 @@ clearButton.addEventListener("click", () => {
   print("---------------------------------");
 });
 
-const questions = [];
+function question1() {
+  const fullName = prompt("Enter your Full Name");
+  const favoriteHobby = prompt("Enter your Favorite Hobby");
+  print(
+    "My Name is " + fullName + " & My Favorite Hobby is " + favoriteHobby + ".",
+  );
+}
+
+function question2() {
+  print("Arthmetic Calculation :- " + 45 * 2 - 10);
+}
+
+function question3() {
+  print("Current Year :- " + new Date().getFullYear());
+}
+
+function question4() {
+  const firstName = prompt("Enter your First Name");
+  const lastName = prompt("Enter your Last Name");
+  print("Your Full Name is :- " + firstName + " " + lastName);
+}
+
+function question5() {
+  var age = 15;
+  print("Before :- " + age);
+  age = 25;
+  print("After :- " + age);
+}
+
+function question6() {
+  print(`Console.error("Error Message")`, "error");
+}
+
+function question7() {
+  const number = Number(prompt("Enter A Number"));
+  print("Square of " + number + " is " + number * number);
+}
+
+function question8() {
+  const isValid = false;
+  print("Boolean Variable :- " + isValid);
+}
+
+function question9() {
+  const age = Number(prompt("Enter your Age"));
+  print("Is age greater than 18? " + (age > 18));
+}
+
+function question10() {
+  print(`Division of 100 by 0 is ${100 / 0}`);
+}
+
+function question11() {
+  let defaultLanguage = "English";
+  print("Variable Declared using let: " + defaultLanguage);
+}
+
+function question12() {
+  const PI = 3.14;
+  print("PI Value is " + PI);
+}
+
+function question13() {
+  var age = 15;
+  print("Before :- " + age);
+  age = 25;
+  print("After :- " + age);
+}
+
+function question14() {
+  let value = null;
+  print("Type of Null is : " + JSON.stringify(typeof value));
+}
+
+function question15() {
+  const value = "25";
+  print(
+    "Value is " + value + " Type of Value is " + JSON.stringify(typeof value),
+  );
+}
+
+function question16() {
+  const isBool = true;
+  print("Boolean Value Type is " + JSON.stringify(typeof isBool));
+}
+
+function question17() {
+  const StringValue = "Harshit Jain";
+  const NumberValue = 21;
+  const BooleanValue = true;
+  print(
+    "String Value : " +
+      StringValue +
+      ", Number Value : " +
+      NumberValue +
+      ", Boolean Value : " +
+      BooleanValue,
+  );
+}
+
+function question18() {
+  var value;
+  print("Variable Without Value : " + JSON.stringify(typeof value));
+}
+
+function question19() {
+  var value = undefined;
+  print("Variable With Undefined Value : " + JSON.stringify(typeof value));
+}
+
+function question20() {
+  const arr = [];
+  print("Empty Array Value : " + JSON.stringify(arr));
+
+  try {
+    arr = [1, 2, 3, 4];
+    print("Re-Assigning Array Value (1, 2, 3, 4) : " + JSON.stringify(arr));
+  } catch (error) {
+    print("Re-Assigning Array Value Error : " + error.message, "error");
+  }
+
+  arr.push(2);
+  arr.push(5);
+  print("Pushing New Array Value : " + JSON.stringify(arr));
+}
+
+const questions = [
+  question1,
+  question2,
+  question3,
+  question4,
+  question5,
+  question6,
+  question7,
+  question8,
+  question9,
+  question10,
+  question11,
+  question12,
+  question13,
+  question14,
+  question15,
+  question16,
+  question17,
+  question18,
+  question19,
+  question20,
+];
 
 questionButtons.forEach((btn, index) => {
   btn.addEventListener("click", () => {
@@ -40,3 +194,17 @@ print(
   "✨ JavaScript Questions Ready! Click any 'Run Code' button to see the output.",
 );
 print("---------------------------------");
+
+const allDetails = document.querySelectorAll("#questions");
+
+allDetails.forEach((details) => {
+  details.addEventListener("toggle", (event) => {
+    if (details.open) {
+      allDetails.forEach((otherDetails) => {
+        if (otherDetails !== details && otherDetails.open) {
+          otherDetails.open = false;
+        }
+      });
+    }
+  });
+});

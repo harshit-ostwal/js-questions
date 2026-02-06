@@ -105,6 +105,7 @@ h4 {
 
     & .question-item button.btn {
       margin-top: auto;
+      font-size: 18px;
     }
   }
 }
@@ -199,10 +200,6 @@ h4 {
       font-size: 18px;
     }
   }
-
-  .btn {
-    font-size: 20px;
-  }
 }
 
 @media (max-width: 1280px) {
@@ -211,6 +208,10 @@ h4 {
 
     & .question-item h4 {
       font-size: 18px;
+    }
+
+    & .question-item button.btn {
+      font-size: 16px;
     }
   }
 
@@ -224,7 +225,7 @@ h4 {
   }
 
   .btn {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
@@ -232,8 +233,14 @@ h4 {
   #questions .question-container {
     grid-template-columns: repeat(1, 1fr);
 
-    & .question-item h4 {
-      font-size: 16px;
+    & .question-item {
+      & h4 {
+        font-size: 16px;
+      }
+
+      & button.btn {
+        font-size: 14px;
+      }
     }
   }
 
@@ -253,9 +260,5 @@ h4 {
   main {
     padding: 20px;
     gap: 20px;
-  }
-
-  .btn {
-    font-size: 16px;
   }
 }
