@@ -36,7 +36,7 @@ function question1() {
 }
 
 function question2() {
-  print("Arthmetic Calculation :- " + 45 * 2 - 10);
+  print(`Arthmetic Calculation :- ${45 * 2 - 10}`);
 }
 
 function question3() {
