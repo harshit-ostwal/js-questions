@@ -311,6 +311,174 @@ function question36() {
   }
 }
 
+function question37() {
+  const word = prompt("Enter a Word");
+  print("Check Vowel or Consonant");
+  const vowels = ["a", "e", "i", "o", "u"];
+
+  if (vowels.includes(word.toLowerCase())) {
+    print("Vowel");
+  } else {
+    print("Consonant");
+  }
+}
+
+function question38() {
+  const num1 = Number(prompt("Enter Num1 Value"));
+  const num2 = Number(prompt("Enter Num2 Value"));
+  const num3 = Number(prompt("Enter Num3 Value"));
+
+  print("Finding Largest of Three Numbers");
+
+  if (num1 >= num2 && num1 >= num3) {
+    print("Num1 is Largest");
+  } else if (num2 >= num1 && num2 >= num3) {
+    print("Num2 is Largest");
+  } else {
+    print("Num3 is Largest");
+  }
+}
+
+function question39() {
+  const password = prompt("Enter your Password");
+  print("Password Validation (admin123)");
+
+  if (password === "admin123") {
+    print("Password is Valid");
+  } else {
+    print("Password is Invalid");
+  }
+}
+
+function question40() {
+  const value = Number(prompt("Enter a Value"));
+
+  print("Check Your Value is Divisible By 3 & 5");
+  if (value % 3 === 0 && value % 5 === 0) {
+    print("Your Value is Divisible By 3 & 5");
+  } else {
+    print("Your Value is Not Divisible By 3 & 5");
+  }
+}
+
+function question41() {
+  let i = 1;
+  let res = 0;
+  print("Printing Sum Value From 1 To 100");
+
+  while (i <= 100) {
+    res = res + i;
+    i++;
+  }
+
+  print("Your Sum Value From 1 To 100 is " + res);
+}
+
+function question42() {
+  const table = Number(prompt("Enter a Number"));
+
+  print("Printing Multiplication Table of " + table);
+
+  for (let i = 1; i <= 10; i++) {
+    print(table + " x " + i + " = " + table * i);
+  }
+}
+
+function question43() {
+  print("Count Even Numbers Between 1 To 50");
+  let count = 0;
+  let i = 1;
+
+  while (i <= 50) {
+    if (i % 2 == 0) {
+      count++;
+    }
+    i++;
+  }
+
+  print("Total Even Numbers Between 1 To 50 is " + count);
+}
+
+function question44() {
+  let i = 10;
+  print("Printing 10 To 1");
+
+  while (1 <= i) {
+    print(i);
+    i--;
+  }
+}
+
+function question45() {
+  let res = 0;
+
+  print("Sum of Even Numbers From 1 To 20");
+
+  for (let i = 1; i <= 20; i++) {
+    if (i % 2 === 0) {
+      res = res + i;
+    }
+  }
+
+  print("Sum of Even Numbers From 1 To 20 is " + res);
+}
+
+function question46() {
+  print("Printing Squares From 1 To 10");
+
+  for (let i = 1; i <= 10; i++) {
+    print("Square of " + i + " is " + i * i);
+  }
+}
+
+function question47() {
+  const value = prompt("Enter a Word");
+
+  print("Counting Characters in Your Word");
+  print("Your Word is " + value);
+  print("Total Characters in Your Word is " + value.length);
+}
+
+function question48() {
+  const arr = [3, 7, 2, 9, 5];
+  print("Finding Largest Number in Array [ 3, 7, 2, 9, 5 ]");
+
+  let max = arr[0];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < max) {
+      max = arr[i];
+    }
+  }
+  print("Largest Number in Array is " + arr[0]);
+}
+
+function question49() {
+  const num = Number(prompt("Enter a Number"));
+  print("Print Pattern of Asterisks");
+
+  for (let i = 0; i < num; i++) {
+    let pattern = "";
+    for (let j = 0; j <= i; j++) {
+      pattern += "* ";
+    }
+    print(pattern);
+  }
+}
+
+function question50() {
+  const arr = [10, 20, 30, 40];
+  print("Sum of Arrary [ 10, 20, 30, 40 ]");
+
+  let res = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    res = res + arr[i];
+  }
+
+  print("Sum of Array [ 10, 20, 30, 40 ] is " + res);
+}
+
 const questions = [
   question1,
   question2,
@@ -346,20 +514,20 @@ const questions = [
   question34,
   question35,
   question36,
-  // question37,
-  // question38,
-  // question39,
-  // question40,
-  // question41,
-  // question42,
-  // question43,
-  // question44,
-  // question45,
-  // question46,
-  // question47,
-  // question48,
-  // question49,
-  // question50,
+  question37,
+  question38,
+  question39,
+  question40,
+  question41,
+  question42,
+  question43,
+  question44,
+  question45,
+  question46,
+  question47,
+  question48,
+  question49,
+  question50,
 ];
 
 questionButtons.forEach((btn, index) => {

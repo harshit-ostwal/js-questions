@@ -62,7 +62,7 @@ h4 {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  height: calc(100% - 500px);
+  height: calc(100% - 475px);
   overflow-y: scroll;
   gap: 40px;
 }
@@ -225,7 +225,7 @@ h4 {
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   #questions .question-container {
     grid-template-columns: repeat(1, 1fr);
 
@@ -241,7 +241,7 @@ h4 {
   }
 
   #container {
-    height: calc(100% - 375px);
+    height: calc(100% - 345px);
     gap: 20px;
   }
 
